@@ -1,0 +1,14 @@
+venv/
+.venv/
+__pycache__/
+.pytest_cache/
+.env
+*.pyc
+storage/*.db
+storage/frames/*
+storage/logs/*
+!storage/frames/.gitkeep
+!storage/logs/.gitkeep
+reports/benchmarks/
+*.tmp
+.streamlit/secrets.toml

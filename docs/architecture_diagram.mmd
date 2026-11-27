@@ -1,0 +1,15 @@
+flowchart TD
+    A[Image / MP4 Video / Telemetry] --> B[Validation & OpenCV Video Extractor]
+    B --> C[FrameProcessor & VisionAnalyzer]
+    C -->|API / Local VLM| D1[OpenAI / Gemini / Ollama VLM]
+    C -->|Offline CV / Sim| D2[OpenCV Heuristic / Deterministic Sim]
+    D1 --> E[Event Classifier & Sequence Correlator]
+    D2 --> E
+    E --> F[(SQLite Indexed Repository)]
+    E --> G[Alert Engine & Time-Window Dedup]
+    G --> F
+    F --> H[ContextManager & LangChain Tools]
+    H --> I[SecurityAgent: Grounded Offline / LLM]
+    F --> J[Video & Daily Intelligence Summarizer]
+    I --> K[7-Tab Streamlit Operator Dashboard]
+    J --> K

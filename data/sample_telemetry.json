@@ -1,0 +1,57 @@
+[
+  {
+    "timestamp": "2026-11-27T12:00:00",
+    "drone_id": "DRONE-001",
+    "latitude": 17.385,
+    "longitude": 78.486,
+    "altitude": 25,
+    "battery_percentage": 85,
+    "speed": 2.5,
+    "location_name": "Main Gate",
+    "flight_status": "MONITORING"
+  },
+  {
+    "timestamp": "2026-11-27T12:02:00",
+    "drone_id": "DRONE-001",
+    "latitude": 17.3851,
+    "longitude": 78.4861,
+    "altitude": 24,
+    "battery_percentage": 84,
+    "speed": 2.0,
+    "location_name": "Parking Area",
+    "flight_status": "MONITORING"
+  },
+  {
+    "timestamp": "2026-11-27T00:01:00",
+    "drone_id": "DRONE-001",
+    "latitude": 17.385,
+    "longitude": 78.486,
+    "altitude": 25,
+    "battery_percentage": 83,
+    "speed": 0.5,
+    "location_name": "Main Gate",
+    "flight_status": "MONITORING"
+  },
+  {
+    "timestamp": "2026-11-27T12:08:00",
+    "drone_id": "DRONE-001",
+    "latitude": 17.3852,
+    "longitude": 78.4862,
+    "altitude": 28,
+    "battery_percentage": 82,
+    "speed": 1.2,
+    "location_name": "Restricted Zone",
+    "flight_status": "MONITORING"
+  },
+  {
+    "timestamp": "2026-11-27T12:10:00",
+    "drone_id": "DRONE-001",
+    "latitude": 17.3853,
+    "longitude": 78.4863,
+    "altitude": 23,
+    "battery_percentage": 18,
+    "speed": 0.0,
+    "location_name": "Garage",
+    "flight_status": "RETURNING"
+  }
+]
