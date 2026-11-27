@@ -1,6 +1,6 @@
 # DroneGuard AI — Intelligent Drone Security Analyst Agent
 
-**Version:** 2.0.0
+**Version:** 2.0.0 | **[Full Documentation](docs/DOCUMENTATION.md)** | **[Technical PDF Report](reports/final_report.pdf)**
 
 DroneGuard AI is a modular, SQLite-backed drone perimeter security monitoring and reasoning system. It combines configurable Vision-Language Model (VLM) and local OpenCV video/image analysis, cross-frame temporal event correlation, prioritized alerting with duplicate suppression, a multi-turn grounded Security Analyst Agent, and a 7-tab Streamlit security operations dashboard.
 

@@ -132,7 +132,11 @@ with st.sidebar:
 
     st.divider()
     st.markdown(
-        f"<div style='font-size:0.70rem;color:#5C5B55;'>Store: {DB_PATH.name}</div>",
+        f"<div style='font-size:0.70rem;color:#5C5B55;margin-bottom:6px;'>Store: {DB_PATH.name}</div>"
+        "<a href='https://github.com/mv1223/DroneGuard-AI/blob/main/docs/DOCUMENTATION.md' target='_blank' "
+        "style='display:block;text-align:center;padding:7px 10px;background:#FBF9F2;border:1.5px solid #141414;"
+        "color:#141414;text-decoration:none;font-size:0.74rem;font-weight:700;text-transform:uppercase;"
+        "letter-spacing:0.05em;box-shadow:2px 2px 0px #141414;'>Open Documentation</a>",
         unsafe_allow_html=True,
     )
 
