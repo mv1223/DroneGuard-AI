@@ -1,9 +1,9 @@
 # Automated Test Report
 
-**Execution Date:** 2026-11-26  
+**Execution Date:** 2026-11-27  
 **Environment:** Windows 11, Python 3.13.7 (`pytest 9.2.0`)  
 **Command:** `.\venv\Scripts\python.exe -m pytest -v`  
-**Result:** **22 passed, 0 failed in 12.66s**
+**Result:** **23 passed, 0 failed in 14.32s**
 
 | Test Module & Case | Purpose | Outcome |
 |---|---|---|
@@ -18,6 +18,7 @@
 | `test_database::test_frame_persistence_and_multi_facet_search` | Search by description, object category, color, source video, time range | PASSED |
 | `test_database::test_event_search_and_indexes_exist` | Event search + SQLite index creation verification | PASSED |
 | `test_integration::test_demo_pipeline_populates_database` | Full demo pipeline end-to-end persistence | PASSED |
+| `test_internal_workflows::test_full_internal_workflows_end_to_end` | End-to-end telemetry, image, video, search, alert triage, agent follow-up, and daily report verification | PASSED |
 | `test_scalability_smoke::test_scalability_1000_frames_benchmark` | 1,000-frame batch ingest and <1s indexed query check | PASSED |
 | `test_telemetry::test_generate_telemetry_valid` | Valid telemetry generation & schema validation | PASSED |
 | `test_telemetry::test_invalid_battery_rejected` | Reject battery > 100% | PASSED |

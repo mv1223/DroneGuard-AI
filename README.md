@@ -24,8 +24,8 @@ DroneGuard AI is a modular, SQLite-backed drone perimeter security monitoring an
 - **Grounded AI Security Analyst (`agent/security_agent.py`, `agent/agent_tools.py`, `core/context_manager.py`)**
   - Multi-turn conversation state for follow-up questions (*"Which frames were those?"*), natural-language time-window parsing (*"between 12 PM and 3 PM"*), and 8 LangChain-compatible `@tool` functions.
   - Works 100% offline via deterministic SQLite retrieval, or optionally uses OpenAI/Gemini/Ollama strictly to summarize retrieved database rows with frame ID & timestamp citations.
-- **7-Tab Streamlit Dashboard (`app.py`)**
-  - Overview, Video & Image Analysis, Frame Intelligence, Security Alerts, Drone Telemetry, AI Security Analyst, and Daily Report & Benchmarks (with Markdown/JSON exports).
+- **7-View Streamlit Console (`app.py`, `ui/`)**
+  - Separate sidebar-routed views for Overview, Video & Image Analysis, Frame Intelligence, Security Alerts, Drone Telemetry, AI Security Analyst, and Daily Report & Benchmarks (with Markdown/JSON exports).
 
 ---
 
@@ -120,7 +120,7 @@ In the dashboard's **Video & Image Analysis** tab, you can also select `opencv_h
 
 ## Running Tests & Reproducible Benchmarks
 
-Run the full automated test suite (22 tests):
+Run the full automated test suite (23 tests):
 
 ```powershell
 .\venv\Scripts\python.exe -m pytest -v

@@ -299,7 +299,7 @@ def generate_final_pdf() -> Path:
         "DroneGuard AI implements an end-to-end modular security analyst pipeline combining configurable Vision-Language "
         "Model (VLM) and local OpenCV video frame analysis, cross-frame temporal correlation, prioritized alerting with "
         "time-windowed deduplication, an indexed SQLite frame store, a grounded multi-turn Security Analyst Agent, and "
-        "a 7-tab Streamlit security dashboard."
+        "a 7-view Streamlit security console."
     )
 
     pdf.add_heading("3. Feature Specification")
@@ -455,11 +455,11 @@ def generate_final_pdf() -> Path:
 
     pdf.add_heading("11. QA and Automated Test Results")
     pdf.add_paragraph(
-        "Executed `pytest -v` after final code changes: 22 passed, 0 failed in 12.66s. Coverage spans video frame "
+        "Executed `pytest -v` after final code changes: 23 passed, 0 failed in 14.32s. Coverage spans video frame "
         "extraction, OpenCV pixel heuristics, invalid/corrupt uploads, missing API key fallback, mocked OpenAI/Gemini/Ollama "
         "HTTP 429 retry and JSON parsing, multi-facet SQLite search and index verification, midnight/restricted-zone/battery/"
-        "altitude rules, repeated vehicle and loitering correlation, duplicate alert suppression, multi-turn Q&A, and a "
-        "1,000-frame scalability smoke test."
+        "altitude rules, repeated vehicle and loitering correlation, duplicate alert suppression, multi-turn Q&A, end-to-end "
+        "internal workflow integration, and a 1,000-frame scalability smoke test."
     )
 
     pdf.add_heading("12. Limitations")
