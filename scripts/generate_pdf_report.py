@@ -46,7 +46,7 @@ class SimplePDFBuilder:
         self._text_at(
             self.MARGIN_L,
             self.PAGE_H - 28,
-            "DroneGuard AI — FlytBase AI Engineer Assignment Report",
+            "DroneGuard AI - Autonomous Security Analyst Technical Report",
             font="F1",
             size=8,
             color=(0.35, 0.42, 0.52),
@@ -283,8 +283,8 @@ def generate_final_pdf() -> Path:
     pdf = SimplePDFBuilder("DroneGuard AI Final Technical Report")
     pdf.add_title_banner(
         "DroneGuard AI v2.0",
-        "Intelligent Drone Security Analyst Agent — Technical Report",
-        f"FlytBase AI Engineer Assignment | Generated {exp['generated_at']} | Python {exp['environment']['python_version']}",
+        "Intelligent Drone Security Analyst Agent - Technical Report",
+        f"Technical Evaluation Report | Generated {exp['generated_at']} | Python {exp['environment']['python_version']}",
     )
 
     pdf.add_heading("1. Problem Statement")

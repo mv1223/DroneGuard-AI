@@ -1,4 +1,4 @@
-"""DroneGuard AI — FlytBase Assignment Tactile Paper Console."""
+"""DroneGuard AI — Tactile Paper Security Analyst Console."""
 
 from __future__ import annotations
 
@@ -22,7 +22,7 @@ from ui.views import (
 )
 
 st.set_page_config(
-    page_title=f"{APP_NAME} — FlytBase Assignment",
+    page_title=f"{APP_NAME} — Security Analyst Console",
     layout="wide",
     initial_sidebar_state="expanded",
 )
@@ -55,22 +55,22 @@ if "active_page" not in st.session_state:
     st.session_state.active_page = qp if qp in valid_keys else "overview"
 
 with st.sidebar:
-    # FlytBase colorful geometric wave mark + crisp wordmark
+    # Tactile geometric DroneGuard brand mark + crisp wordmark
     st.markdown(
         f"""
         <div style="padding: 4px 2px 10px 2px;">
             <div style="display:flex; align-items:center; gap:9px; margin-bottom:8px;">
-                <svg width="28" height="20" viewBox="0 0 36 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                    <path d="M3 16C7 6 11 6 14 14C16 19 20 19 23 11C26 4 30 6 33 14" stroke="#0EA5E9" stroke-width="4.2" stroke-linecap="round"/>
-                    <path d="M14 14C16 19 20 19 23 11" stroke="#F59E0B" stroke-width="4.2" stroke-linecap="round"/>
-                    <path d="M23 11C26 4 30 6 33 14" stroke="#EF4444" stroke-width="4.2" stroke-linecap="round"/>
+                <svg width="26" height="26" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <rect x="2" y="2" width="28" height="28" fill="#FBF9F2" stroke="#141414" stroke-width="2.2"/>
+                    <path d="M9 16L16 9L23 16L16 23L9 16Z" stroke="#057A36" stroke-width="2.2"/>
+                    <rect x="14" y="14" width="4" height="4" fill="#141414"/>
                 </svg>
-                <span class="fb-brand-title" style="font-size:1.25rem;font-weight:700;letter-spacing:-0.02em;color:#141414;">
-                    flytbase
+                <span class="fb-brand-title" style="font-size:1.22rem;font-weight:700;letter-spacing:-0.02em;color:#141414;">
+                    DroneGuard AI
                 </span>
             </div>
             <div style="font-size:0.70rem;letter-spacing:0.10em;color:#5C5B55;text-transform:uppercase;">
-                DroneGuard AI · v{APP_VERSION}
+                Perimeter Console · v{APP_VERSION}
             </div>
         </div>
         """,

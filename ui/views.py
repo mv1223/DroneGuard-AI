@@ -1,4 +1,4 @@
-"""Dedicated page views for the DroneGuard AI Hybrid Command Center."""
+"""Dedicated page views for the DroneGuard AI security operations console."""
 
 from __future__ import annotations
 
@@ -498,10 +498,10 @@ def render_ai_analyst() -> None:
         "Which security events require attention?",
         "Summarize today's drone activity",
     ]
-    q_cols = st.columns(4)
+    q_cols = st.columns(2, gap="small")
     chosen_quick = None
     for idx, qp in enumerate(quick_prompts):
-        if q_cols[idx % 4].button(qp, key=f"qp_{idx}", use_container_width=True):
+        if q_cols[idx % 2].button(qp, key=f"qp_{idx}", use_container_width=True):
             chosen_quick = qp
 
     st.divider()

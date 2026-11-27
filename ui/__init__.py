@@ -1,1 +1,1 @@
-"""UI package for DroneGuard AI FlytBase-inspired console."""
+"""UI package for the DroneGuard AI security operations console."""

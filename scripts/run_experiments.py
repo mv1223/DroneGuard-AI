@@ -210,33 +210,33 @@ def _draw_charts(results: dict, chart_dir: Path) -> None:
     img2.save(chart_dir / "interval_tradeoff_chart.png")
 
     # Chart 3: Clean Architecture Block Diagram PNG
-    aw, ah = 960, 480
+    aw, ah = 980, 490
     arch = Image.new("RGB", (aw, ah), (248, 250, 253))
     ad = ImageDraw.Draw(arch)
-    ad.text((28, 18), "DroneGuard AI v2.0 — System Architecture & Data Flow", fill=(18, 32, 58))
+    ad.text((28, 18), "DroneGuard AI v2.0 - System Architecture & Data Flow", fill=(18, 32, 58))
     boxes = [
-        (40, 75, 240, 155, (226, 238, 255), "1. Inputs\nImages / MP4 Video\nJSON Telemetry"),
-        (290, 75, 510, 155, (226, 238, 255), "2. Media Pipeline\nOpenCV Extractor\nInterval Sampling"),
-        (560, 75, 860, 155, (218, 244, 232), "3. Vision Providers\nOpenAI / Gemini / Ollama\nOpenCV HOG + Sim Fallback"),
-        (560, 205, 860, 285, (255, 242, 218), "4. Reasoning & Rules\nEvent Classifier + Correlation\nLoitering & Repeat-Vehicle"),
-        (290, 205, 510, 285, (238, 232, 255), "5. SQLite Repository\nIndexed Frames, Detections\nEvents, Alerts, Model Runs"),
-        (40, 205, 240, 285, (255, 228, 228), "6. Alert Engine\nCritical/High/Med/Low\nTime-Window Dedup"),
-        (160, 345, 460, 430, (225, 240, 250), "7. Security Analyst Agent\nContextManager + LangChain Tools\nGrounded Offline / LLM Mode"),
-        (520, 345, 820, 430, (225, 240, 250), "8. Streamlit Dashboard\n7 Tabs: Media, Frame Index,\nAlerts, Telemetry, Q&A, Reports"),
+        (40, 75, 250, 158, (226, 238, 255), "1. Inputs\nImages / MP4 Video\nJSON Telemetry"),
+        (300, 75, 530, 158, (226, 238, 255), "2. Media Pipeline\nOpenCV Extractor\nInterval Sampling"),
+        (580, 75, 900, 158, (218, 244, 232), "3. Vision Providers\nOpenAI / Gemini / Ollama\nOpenCV + Sim Fallback"),
+        (580, 210, 900, 293, (255, 242, 218), "4. Reasoning & Rules\nEvent Classifier + Correlation\nLoitering & Repeat-Vehicle"),
+        (300, 210, 530, 293, (238, 232, 255), "5. SQLite Repository\nIndexed Frames, Detections\nEvents, Alerts, Model Runs"),
+        (40, 210, 250, 293, (255, 228, 228), "6. Alert Engine\nCritical/High/Med/Low\nTime-Window Dedup"),
+        (140, 355, 470, 442, (225, 240, 250), "7. Security Analyst Agent\nContextManager + LangChain Tools\nGrounded Offline / LLM Mode"),
+        (520, 355, 860, 442, (225, 240, 250), "8. Streamlit Console\n7 Views: Media, Frame Index,\nAlerts, Telemetry, Q&A, Reports"),
     ]
     for x0, y0, x1, y1, fill, text in boxes:
-        ad.rounded_rectangle((x0, y0, x1, y1), radius=10, fill=fill, outline=(70, 95, 130), width=2)
+        ad.rounded_rectangle((x0, y0, x1, y1), radius=8, fill=fill, outline=(70, 95, 130), width=2)
         ad.multiline_text((x0 + 12, y0 + 14), text, fill=(20, 30, 45), spacing=4)
 
     arrows = [
-        ((240, 115), (290, 115)),
-        ((510, 115), (560, 115)),
-        ((710, 155), (710, 205)),
-        ((560, 245), (510, 245)),
-        ((290, 245), (240, 245)),
-        ((380, 285), (320, 345)),
-        ((430, 285), (630, 345)),
-        ((460, 388), (520, 388)),
+        ((250, 116), (300, 116)),
+        ((530, 116), (580, 116)),
+        ((740, 158), (740, 210)),
+        ((580, 251), (530, 251)),
+        ((300, 251), (250, 251)),
+        ((385, 293), (315, 355)),
+        ((435, 293), (660, 355)),
+        ((470, 398), (520, 398)),
     ]
     for p1, p2 in arrows:
         ad.line((p1[0], p1[1], p2[0], p2[1]), fill=(55, 80, 120), width=3)

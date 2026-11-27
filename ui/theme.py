@@ -1,4 +1,4 @@
-"""FlytBase Assignment Tactile Paper / Neo-Brutalist Design System.
+"""DroneGuard AI Tactile Paper / Neo-Brutalist Design System.
 
 Warm cream paper canvas (#F7F4EB), sharp-cornered #FBF9F2 cards with 2px solid
 #141414 borders and 4px hard offset shadows, Forest Green (#057A36) primary
@@ -94,8 +94,14 @@ header[data-testid="stHeader"] {
 /* Sidebar Navigation Buttons (sharp corners, tactile shadow on hover/active) */
 [data-testid="stSidebar"] [class*="st-key-nav_"] button {
     width: 100%;
+    display: flex !important;
+    align-items: center !important;
     justify-content: flex-start !important;
     text-align: left !important;
+    white-space: normal !important;
+    height: auto !important;
+    min-height: 42px !important;
+    line-height: 1.35 !important;
     background-color: var(--paper-card) !important;
     border: 1.5px solid var(--ink) !important;
     border-radius: 0px !important;
@@ -201,6 +207,7 @@ header[data-testid="stHeader"] {
 /* Main Workspace Page Header & Notice Bar */
 .fb-page-header {
     display: flex;
+    flex-wrap: wrap;
     justify-content: space-between;
     align-items: flex-end;
     padding-bottom: 0.85rem;
@@ -222,15 +229,18 @@ header[data-testid="stHeader"] {
     font-size: 2.0rem;
     font-weight: 700;
     letter-spacing: -0.025em;
-    line-height: 1.12;
+    line-height: 1.15;
     color: var(--ink);
     margin: 0 0 0.25rem 0;
+    overflow-wrap: break-word;
 }
 
 .fb-subtitle {
     font-size: 0.83rem;
+    line-height: 1.5;
     color: var(--ink-muted);
     margin: 0;
+    overflow-wrap: break-word;
 }
 
 .fb-header-pill {
@@ -253,7 +263,9 @@ header[data-testid="stHeader"] {
     padding: 10px 14px;
     margin-bottom: 1.35rem;
     font-size: 0.82rem;
+    line-height: 1.45;
     display: flex;
+    flex-wrap: wrap;
     align-items: center;
     justify-content: space-between;
     gap: 12px;
@@ -275,13 +287,9 @@ header[data-testid="stHeader"] {
 /* KPI Grid with hard black offset shadows */
 .fb-kpi-grid {
     display: grid;
-    grid-template-columns: repeat(5, minmax(0, 1fr));
+    grid-template-columns: repeat(auto-fit, minmax(185px, 1fr));
     gap: 14px;
-    margin-bottom: 1.4rem;
-}
-
-@media (max-width: 1024px) {
-    .fb-kpi-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+    margin-bottom: 1.5rem;
 }
 
 .fb-kpi-card {
@@ -289,6 +297,7 @@ header[data-testid="stHeader"] {
     border: 2px solid var(--ink);
     border-radius: 0px;
     padding: 15px 16px;
+    min-width: 0;
     box-shadow: var(--shadow-md);
     transition: transform 0.18s cubic-bezier(0.22, 1, 0.36, 1), box-shadow 0.18s ease;
 }
@@ -312,13 +321,16 @@ header[data-testid="stHeader"] {
     font-size: 1.85rem;
     font-weight: 700;
     color: var(--ink);
-    line-height: 1.05;
+    line-height: 1.1;
+    overflow-wrap: break-word;
 }
 
 .fb-kpi-meta {
     margin-top: 7px;
     font-size: 0.72rem;
+    line-height: 1.4;
     color: var(--ink-muted);
+    overflow-wrap: break-word;
 }
 
 /* Bordered Streamlit containers -> Sharp neo-brutalist paper cards */
@@ -348,7 +360,12 @@ header[data-testid="stHeader"] {
     font-size: 0.78rem !important;
     font-weight: 700 !important;
     text-transform: uppercase;
-    letter-spacing: 0.05em;
+    letter-spacing: 0.04em;
+    white-space: normal !important;
+    height: auto !important;
+    min-height: 42px !important;
+    line-height: 1.35 !important;
+    padding: 0.50rem 0.85rem !important;
     box-shadow: var(--shadow-sm) !important;
     transition: transform 0.15s cubic-bezier(0.22, 1, 0.36, 1),
                 box-shadow 0.15s ease,

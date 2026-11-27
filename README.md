@@ -1,6 +1,5 @@
 # DroneGuard AI — Intelligent Drone Security Analyst Agent
 
-**Target Assignment:** FlytBase AI Engineer Hiring Assignment  
 **Version:** 2.0.0
 
 DroneGuard AI is a modular, SQLite-backed drone perimeter security monitoring and reasoning system. It combines configurable Vision-Language Model (VLM) and local OpenCV video/image analysis, cross-frame temporal event correlation, prioritized alerting with duplicate suppression, a multi-turn grounded Security Analyst Agent, and a 7-tab Streamlit security operations dashboard.
